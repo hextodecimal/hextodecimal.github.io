@@ -3,14 +3,14 @@
 <head>
     <title>Hexadecimal to Decimal Converter</title>
 
-    <link rel="icon" href="favicon.ico">
+    <link rel="icon" href="icon.ico">
 
     <script src="index.js"></script>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     
     <nav id="top-nav" class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <a class="navbar-brand" href="#"> <b>hextodecimal.org</b> </a>
+      <a class="navbar-brand" href="#"> <img id="icon-img" src="icon.ico" alt=""> <b>hextodecimal.org</b> </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -46,7 +46,8 @@
                     </div>
                     <input id="dec" type="text" aria-label="Decimal" class="form-control"
                         oninput="convert_dec_to_hex(document.getElementById('dec').value)"
-                        onclick="convert_dec_to_hex(document.getElementById('dec').value)">
+                        onclick="convert_dec_to_hex(document.getElementById('dec').value)"
+                        placeholder="Type here to convert">
                 </div>
             </div>
 
@@ -74,7 +75,8 @@
 
                 <input id="hex" type="text" aria-label="Hex" class="form-control"
                     oninput="convert_hex_to_dec(document.getElementById('hex').value)"
-                    onclick="convert_hex_to_dec(document.getElementById('hex').value)">
+                    onclick="convert_hex_to_dec(document.getElementById('hex').value)"
+                    placeholder="Type here to convert">
                 </div>
             </div>
 

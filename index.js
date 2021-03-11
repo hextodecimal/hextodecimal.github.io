@@ -1,5 +1,8 @@
 function convert_hex_to_dec(hex){
 
+    var test = document.getElementById("dec");
+    test.style.borderColor = "red";
+    test.focus.style.borderColor = "red";
 
     hex = "0x" + hex;
     let decimal = BigInt(hex);
@@ -10,8 +13,6 @@ function convert_hex_to_dec(hex){
 }
 
 function convert_dec_to_hex(decimal){
-
-
 
     decimal = BigInt(decimal);
     let hex = decimal.toString(16).toUpperCase();
