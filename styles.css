@@ -10,6 +10,7 @@ html,body{
     height: 100%;
     margin: auto;
     max-width: 800px;
+    font-size: large;
 }
 
 .results-div{

@@ -1,6 +1,5 @@
 function convert_hex_to_dec(hex){
-    if(hex == "")
-        hex = "0";
+
 
     hex = "0x" + hex;
     let decimal = BigInt(hex);
@@ -11,8 +10,8 @@ function convert_hex_to_dec(hex){
 }
 
 function convert_dec_to_hex(decimal){
-    if(decimal == "")
-        decimal = "0";
+
+
 
     decimal = BigInt(decimal);
     let hex = decimal.toString(16).toUpperCase();
