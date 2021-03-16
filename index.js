@@ -1,7 +1,30 @@
 function convert_hex_to_dec(hex){
 
+    if(hex === ""){
+        let result = document.getElementById("result-dec");
+        result.innerText = "";
+        return;
+    }
+
     hex = "0x" + hex;
-    let decimal = BigInt(hex);
+
+    let decimal;
+    try{
+        decimal = BigInt(hex);
+        var input_hex = document.getElementById("hex");
+        input_hex.classList.remove("is-invalid");
+        let result = document.getElementById("result-dec");
+        result.style.color = "black";
+    }catch{
+        console.log("err");
+        var input_hex = document.getElementById("hex");
+        input_hex.classList.add("is-invalid");
+        let result = document.getElementById("result-dec");
+        result.style.color = "red";
+        return;
+    }
+
+    
     let result = document.getElementById("result-dec");
     result.innerText = decimal;
 
@@ -9,6 +32,28 @@ function convert_hex_to_dec(hex){
 }
 
 function convert_dec_to_hex(decimal){
+
+    if(decimal === ""){
+        let result = document.getElementById("result-hex");
+        result.innerText = "";
+        return;
+    }
+
+    try{
+        decimal = BigInt(decimal);
+        var input_dec = document.getElementById("dec");
+        input_dec.classList.remove("is-invalid");
+        let result = document.getElementById("result-hex");
+        result.style.color = "black";
+
+    }catch{
+        console.log("err");
+        var input_dec = document.getElementById("dec");
+        input_dec.classList.add("is-invalid");
+        let result = document.getElementById("result-hex");
+        result.style.color = "red";
+        return;
+    }
 
     decimal = BigInt(decimal);
     let hex = decimal.toString(16).toUpperCase();
