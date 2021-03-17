@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Hexadecimal to Decimal Converter</title>
+    <title>Binary to Decimal Converter</title>
 
     <link rel="icon" href="icon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <script src="index.js"></script>
     <link rel="stylesheet" href="styles.css">
@@ -19,7 +20,7 @@
         <div class="navbar-nav">
           <a class="nav-item nav-link" href="index.html">Hex to decimal</a>
           <a class="nav-item nav-link active" href="#">Binary to Decimal</a>
-          <a class="nav-item nav-link" href="about.html">About</a>
+          <a class="nav-item nav-link" href="about.html">About Us</a>
 
         </div>
       </div>
@@ -59,9 +60,9 @@
 
             <div class="results-div">
                 <div class="card">
-                    <div class="popup" onclick="copy_to_clipboard('hex')">
-                        <span id="result-hex"></span>
-                        <span class="popuptext" id="pop-hex">Copied to clipboard</span>
+                    <div class="popup" onclick="copy_to_clipboard('bin')">
+                        <span id="result-bin"></span>
+                        <span class="popuptext" id="pop-bin">Copied to clipboard</span>
                     </div>
                 </div>
             </div>
@@ -79,9 +80,9 @@
                         <span class="input-group-text">Binary</span>
                     </div>
 
-                <input id="hex" type="text" aria-label="Hex" class="form-control"
-                    oninput=""
-                    onclick=""
+                <input id="bin" type="text" aria-label="Binary" class="form-control"
+                    oninput="convert_bin_to_dec(document.getElementById('bin').value)"
+                    onclick="convert_bin_to_dec(document.getElementById('bin').value)"
                     placeholder="Type here to convert">
                 </div>
             </div>

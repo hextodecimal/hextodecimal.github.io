@@ -63,6 +63,41 @@ function convert_dec_to_hex(decimal){
     document.getElementById("hex").value = hex;
 }
 
+function convert_bin_to_dec(binary){
+    
+}
+
+function convert_dec_to_bin(decimal){
+    if(decimal === ""){
+        let result = document.getElementById("result-hex");
+        result.innerText = "";
+        return;
+    }
+
+    try{
+        decimal = BigInt(decimal);
+        var input_dec = document.getElementById("dec");
+        input_dec.classList.remove("is-invalid");
+        let result = document.getElementById("result-hex");
+        result.style.color = "black";
+
+    }catch{
+        console.log("err");
+        var input_dec = document.getElementById("dec");
+        input_dec.classList.add("is-invalid");
+        let result = document.getElementById("result-hex");
+        result.style.color = "red";
+        return;
+    }
+
+    decimal = BigInt(decimal);
+    let hex = decimal.toString(16).toUpperCase();
+    let result = document.getElementById("result-hex");
+    result.innerText = "0x" + hex;
+
+    document.getElementById("hex").value = hex;
+}
+
 function copy_to_clipboard(result_div){
     var textToCopy = document.getElementById("result-" + result_div).innerText;
 
