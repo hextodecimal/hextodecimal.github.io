@@ -1,26 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
-    <title>Hexadecimal to Decimal Converter</title>
+    <title>Hexadezimal-Dezimal-Konverter</title>
 
-    <link rel="icon" href="icon.ico">
+    <link rel="icon" href="../icon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <script src="index.js"></script>
-    <link rel="stylesheet" href="styles.css">
+    <script src="../index.js"></script>
+    <link rel="stylesheet" href="../styles.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     
     <nav id="top-nav" class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <a class="navbar-brand" href="#"> <img id="icon-img" src="icon.ico" alt=""> <b>hextodecimal.org</b> </a>
+      <a class="navbar-brand" href="#"> <img id="icon-img" src="../icon.ico" alt=""> <b>hextodecimal.org</b> </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
 
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
-          <a class="nav-item nav-link active" href="#">Hex to decimal<span class="sr-only">(current)</span></a>
-          <a class="nav-item nav-link" href="binary.html">Binary to Decimal</a>
-          <a class="nav-item nav-link" href="about.html">About Us</a>
+          <a class="nav-item nav-link active" href="#">Hex zu Dezimal</a>
+          <a class="nav-item nav-link" href="../binary.html">Binär bis Dezimal</a>
+          <a class="nav-item nav-link" href="../about.html">Über uns</a>
         </div>
       </div>
     </nav>
@@ -34,8 +34,8 @@
     </script>
 
     <link rel="alternate" hreflang="tr" href="https://www.hextodecimal.org/tr/hex.html" />
+    <link rel="alternate" hreflang="en" href="https://www.hextodecimal.org/index.html" />
     <link rel="alternate" hreflang="hi" href="https://www.hextodecimal.org/hi/hex.html" />
-    <link rel="alternate" hreflang="de" href="https://www.hextodecimal.org/de/hex.html" />
 
     <script data-ad-client="ca-pub-9589716148066137" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 
@@ -43,21 +43,21 @@
 <body>
 
 <div id="main-div">
-    <h1 style="text-align: center;">Hexadecimal to Decimal Converter</h1>
-    <p style="text-align: center;">To use this online hex to decimal converter tool, type a decimal or hex value into the fields below. Result will be generated as you type. Click on the result to copy it to your clipboard!</p>
+    <h1 style="text-align: center;">Hexadezimal-Dezimal-Konverter</h1>
+    <p style="text-align: center;">Geben Sie einen Dezimal- oder Hex-Wert in die Felder unten ein, um dieses Online-Konverterwerkzeug für Hex zu Dezimal zu verwenden. Das Ergebnis wird während der Eingabe generiert. Klicken Sie auf das Ergebnis, um es in Ihre Zwischenablage zu kopieren!</p>
     
     <div class="card big-card">
-        <div class="card-header">Decimal to Hexadecimal</div>
+        <div class="card-header">Dezimal bis hexadezimal</div>
         <div class="card-body">
             <div class="form-row align-items-center">
                 <div class="input-group">
                     <div class="input-group-prepend">
-                        <span class="input-group-text">Decimal</span>
+                        <span class="input-group-text">Dezimal</span>
                     </div>
                     <input id="dec" type="text" aria-label="Decimal" class="form-control"
                         oninput="convert_dec_to_hex(document.getElementById('dec').value)"
                         onclick="convert_dec_to_hex(document.getElementById('dec').value)"
-                        placeholder="Type here to convert">
+                        placeholder="Geben Sie hier ein, um zu konvertieren">
                 </div>
             </div>
 
@@ -65,7 +65,7 @@
                 <div class="card">
                     <div class="popup" onclick="copy_to_clipboard('hex')">
                         <span id="result-hex"></span>
-                        <span class="popuptext" id="pop-hex">Copied to clipboard</span>
+                        <span class="popuptext" id="pop-hex">In die Zwischenablage kopiert!</span>
                     </div>
                 </div>
             </div>
@@ -73,20 +73,20 @@
     </div>
 
     <div class="card big-card">
-        <div class="card-header">Hexadecimal to Decimal</div>
+        <div class="card-header">Hexadezimal bis Dezimal</div>
 
         <div class="card-body">
             <div class="form-row align-items-center">
                 <div class="input-group">
 
                     <div class="input-group-prepend">
-                        <span class="input-group-text">Hexadecimal</span>
+                        <span class="input-group-text">Hexadezimal</span>
                     </div>
 
                 <input id="hex" type="text" aria-label="Hex" class="form-control"
                     oninput="convert_hex_to_dec(document.getElementById('hex').value)"
                     onclick="convert_hex_to_dec(document.getElementById('hex').value)"
-                    placeholder="Type here to convert">
+                    placeholder="Geben Sie hier ein, um zu konvertieren">
                 </div>
             </div>
 
@@ -95,7 +95,7 @@
                     <div class="popup" onclick="copy_to_clipboard('dec')">
                         
                         <span id="result-dec"></span>
-                        <span class="popuptext" id="pop-dec">Copied to clipboard</span>
+                        <span class="popuptext" id="pop-dec">In die Zwischenablage kopiert</span>
                     </div>
                 </div>
             </div>
@@ -107,21 +107,20 @@
 
 
     <div class="card big-card">
-        <div class="card-header"><h2 style="text-align: center;">What is Hexadecimal?</h2></div>
+        <div class="card-header"><h2 style="text-align: center;">Was ist hexadezimal?</h2></div>
         <div class="card-body">
-            The hexadecimal numeral system aka hex, is a base 16 numeral system made up for computers. Unlike the standard numeral system with ten symbols (0,1,2..9) hexadecimal uses the decimal numbers and six extra symbols. There are no numerical symbols that represent values greater than nine, so first 6 letters of the English alphabet are used. A for 10, B for 11, C for 12, D for 13, E for 14 and F for 15.
-        </div>
+            Das hexadezimale Zahlensystem, auch bekannt als hexadezimal, ist ein Basis-16-Zahlensystem für Computer. Im Gegensatz zum Standard-Zahlensystem mit zehn Symbolen (0,1,2..9) verwendet die Hexadezimalzahl die Dezimalzahlen und sechs zusätzliche Symbole. Es gibt keine numerischen Symbole, die Werte größer als neun darstellen. Daher werden die ersten 6 Buchstaben des englischen Alphabets verwendet. A für 10, B für 11, C für 12, D für 13, E für 14 und F für 15.        </div>
     </div>
 
     <div class="card big-card">
-        <div class="card-header"><h2 style="text-align: center;">How to convert decimal to hex?</h2></div>
+        <div class="card-header"><h2 style="text-align: center;">Wie konvertiere ich Dezimal in Hex?</h2></div>
         <div class="card-body">
 
             <ul class="list-group">
-                <li class="list-group-item">1. Divide the number by 16.</li>
-                <li class="list-group-item">2. Get the integer quotient for the next iteration.</li>
-                <li class="list-group-item">3. Get the remainder for the hex digit.</li>
-                <li class="list-group-item">4. Repeat the steps until the quotient is equal to 0.</li>
+                <li class="list-group-item">1. Teilen Sie die Zahl durch 16.</li>
+                <li class="list-group-item">2. Holen Sie sich den Integer-Quotienten für die nächste Iteration.</li>
+                <li class="list-group-item">3. Holen Sie sich den Rest für die hexadezimale Ziffer.</li>
+                <li class="list-group-item">4. Wiederholen Sie die Schritte, bis der Quotient gleich 0 ist.</li>
             </ul>
 
         </div>

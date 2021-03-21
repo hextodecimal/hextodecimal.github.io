@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>हेक्साडेसिमल से दशमलव कनवर्टर</title>
+
+    <link rel="icon" href="../icon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="../index.js"></script>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    
+    <nav id="top-nav" class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="#"> <img id="icon-img" src="../icon.ico" alt=""> <b>hextodecimal.org</b> </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-item nav-link active" href="#">हेक्स टू दशमलव<span class="sr-only">(current)</span></a>
+          <a class="nav-item nav-link" href="../binary.html">दशमलव से द्विआधारी</a>
+          <a class="nav-item nav-link" href="../about.html">हमारे बारे में</a>
+        </div>
+      </div>
+    </nav>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MXPGJ5VYGX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-MXPGJ5VYGX');
+    </script>
+
+    <link rel="alternate" hreflang="tr" href="https://www.hextodecimal.org/tr/hex.html" />
+    <link rel="alternate" hreflang="en" href="https://www.hextodecimal.org/index.html" />
+    <link rel="alternate" hreflang="de" href="https://www.hextodecimal.org/de/hex.html" />
+
+    <script data-ad-client="ca-pub-9589716148066137" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+</head>
+<body>
+
+<div id="main-div">
+    <h1 style="text-align: center;">हेक्साडेसिमल से दशमलव कनवर्टर</h1>
+    <p style="text-align: center;">दशमलव कनवर्टर टूल में इस ऑनलाइन हेक्स का उपयोग करने के लिए, नीचे दिए गए फ़ील्ड में दशमलव या हेक्स मान टाइप करें। जैसे ही आप टाइप करेंगे रिजल्ट जेनरेट हो जाएगा। अपने क्लिपबोर्ड पर कॉपी करने के लिए परिणाम पर क्लिक करें!</p>
+    
+    <div class="card big-card">
+        <div class="card-header">हेक्साडेसिमल को दशमलव</div>
+        <div class="card-body">
+            <div class="form-row align-items-center">
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">दशमलव</span>
+                    </div>
+                    <input id="dec" type="text" aria-label="Decimal" class="form-control"
+                        oninput="convert_dec_to_hex(document.getElementById('dec').value)"
+                        onclick="convert_dec_to_hex(document.getElementById('dec').value)"
+                        placeholder="कन्वर्ट करने के लिए यहां टाइप करें">
+                </div>
+            </div>
+
+            <div class="results-div">
+                <div class="card">
+                    <div class="popup" onclick="copy_to_clipboard('hex')">
+                        <span id="result-hex"></span>
+                        <span class="popuptext" id="pop-hex">क्लिपबोर्ड पर नकल</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card big-card">
+        <div class="card-header">हेक्साडेसिमल से दशमलव तक</div>
+
+        <div class="card-body">
+            <div class="form-row align-items-center">
+                <div class="input-group">
+
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">हेक्साडेसिमल</span>
+                    </div>
+
+                <input id="hex" type="text" aria-label="Hex" class="form-control"
+                    oninput="convert_hex_to_dec(document.getElementById('hex').value)"
+                    onclick="convert_hex_to_dec(document.getElementById('hex').value)"
+                    placeholder="कन्वर्ट करने के लिए यहां टाइप करें">
+                </div>
+            </div>
+
+            <div class="results-div">
+                <div class="card">
+                    <div class="popup" onclick="copy_to_clipboard('dec')">
+                        
+                        <span id="result-dec"></span>
+                        <span class="popuptext" id="pop-dec">क्लिपबोर्ड पर नकल</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <br>
+
+
+    <div class="card big-card">
+        <div class="card-header"><h2 style="text-align: center;">हेक्साडेसिमल क्या है?</h2></div>
+        <div class="card-body">
+            हेक्साडेसिमल अंक प्रणाली उर्फ हेक्स, कंप्यूटर के लिए बनाया गया एक आधार 16 अंक प्रणाली है। दस प्रतीकों (0,1,2..9) के साथ मानक अंक प्रणाली के विपरीत, हेक्साडेसिमल दशमलव संख्या और छह अतिरिक्त प्रतीकों का उपयोग करता है। कोई संख्यात्मक चिह्न नहीं हैं जो नौ से अधिक मूल्यों का प्रतिनिधित्व करते हैं, इसलिए अंग्रेजी वर्णमाला के पहले 6 अक्षरों का उपयोग किया जाता है। ए के लिए 10, बी के लिए 11, सी के लिए 12, डी के लिए 13, ई के लिए 14 और एफ के लिए 15।
+        </div>
+    </div>
+
+    <div class="card big-card">
+        <div class="card-header"><h2 style="text-align: center;">दशमलव को हेक्स में कैसे बदलें?</h2></div>
+        <div class="card-body">
+
+            <ul class="list-group">
+                <li class="list-group-item">1. संख्या को 16 से विभाजित करें.</li>
+                <li class="list-group-item">2. अगले पुनरावृत्ति के लिए पूर्णांक भागफल प्राप्त करें.</li>
+                <li class="list-group-item">3. हेक्स अंक के लिए शेष प्राप्त करें.</li>
+                <li class="list-group-item">4. जब तक भागफल 0 के बराबर न हो तब तक चरणों को दोहराएं.</li>
+            </ul>
+
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+</body>
+
+</html>

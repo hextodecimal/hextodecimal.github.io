@@ -99,17 +99,15 @@ function convert_dec_to_bin(decimal){
 }
 
 function copy_to_clipboard(result_div){
-    var textToCopy = document.getElementById("result-" + result_div).innerText;
+    var text_to_copy = document.getElementById("result-" + result_div).innerText;
 
-    if(textToCopy[1] === "x") 
-        textToCopy = textToCopy.substring(2);
+    if(text_to_copy[1] === "x") 
+        text_to_copy = text_to_copy.substring(2);
 
     var textArea = document.createElement("textarea");
-    textArea.value = textToCopy;
+    textArea.value = text_to_copy;
 
-    //alert(textToCopy + " copied to the clipboard!");
     pop_up("pop-" + result_div);
-
     document.body.appendChild(textArea);
     textArea.select();
     document.execCommand("Copy");
@@ -119,6 +117,7 @@ function copy_to_clipboard(result_div){
 function pop_up(pop_id) {
     var popup = document.getElementById(pop_id);
     popup.classList.toggle("show");
+    setTimeout(() => {  popup.classList.remove("show"); }, 1500);
 }
 
 
